@@ -1,0 +1,37 @@
+name: Bug report
+description: Something isn't working
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Steps to reproduce
+      description: Commands you ran, and the repo/remote situation (e.g. "GitHub ahead of Gitea, local dirty").
+    validations:
+      required: true
+  - type: textarea
+    id: output
+    attributes:
+      label: Output
+      description: Paste the relevant output. `repowatch status --json` is often the most useful. Redact private hostnames if needed.
+      render: text
+  - type: input
+    id: version
+    attributes:
+      label: repowatch version
+      placeholder: repowatch --version
+    validations:
+      required: true
+  - type: input
+    id: env
+    attributes:
+      label: OS, shell, Python and git versions
+      placeholder: Windows 11, Git Bash, Python 3.13, git 2.47
+    validations:
+      required: true
